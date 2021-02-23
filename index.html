@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+<html>
+<title>Select Form</title>
+<script>
+    function myFunction() {
+        //Tutti i campi compilati devono essere nell'alert con scritti tutti i dati inseriti
+        username=FormAccesso.username.value;
+        password=FormAccesso.password.value;
+        email=FormAccesso.email.value;
+        //dominio=FormAccesso.dominioPosta.selectedIndex;
+        dominio= document.getElementById("dominioPosta").value;
+
+        alert("L'username è: "+username+" , "+"la password è: "+password+" , "+"l'email è: "+email+" , "+"il select è: "+dominio);
+    }
+</script>
+<body>
+    <form name="FormAccesso">
+        <p>Inserisci i dati:</p>
+        <input type="text" id="username" placeholder="username">
+        <br>
+        <br>
+        <input type="password" id="password" placeholder="password">
+        <br>
+        <br>
+        <input type="email" id="email" placeholder="email">
+        <p>Scegli il dominio:</p>
+        <select id="dominioPosta"> 
+            <option value="Tim">tim.it</option>        
+            <option value="Alice">alice.it</option>                     
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Submit" onclick="myFunction()">
+    </form>
+</body>
+</html> 
